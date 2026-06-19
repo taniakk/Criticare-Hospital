@@ -76,11 +76,11 @@ footer.innerHTML = `
                     </div>
 
                     <!-- Center Section -->
-                    <div class="w-[50%] border-y lg:border-y-0 lg:border-x border-gray-800 px-6 py-10 text-center">
+                    <div class="md:w-[50%] border-y lg:border-y-0 lg:border-x border-gray-800 px-6 py-10 text-center">
 
                         <img src="images/footer-logo.png" class="mx-auto w-40 mb-5" alt="Footer Logo">
 
-                        <p class="text-gray-300 leading-7 text-sm">
+                        <p class="text-gray-300 leading-7 text-sm ">
                             Criticare ICCU Multispeciality & Trauma Centre the centre is the
                             biggest hospital in Airoli that provides you with 1-stop all
                             facilities.
@@ -126,7 +126,7 @@ footer.innerHTML = `
         <!--Footer Bottom-->
         <div class="footer-bottom bg-[#fd2222] "> <!-- Scroll To Top -->
           
-                        <p class="!text-white ml-[150px]">© 2026 Criticare Hospital, All Right Reserved.</p>
+                        <p class="!text-white md:ml-[150px]">© 2026 Criticare Hospital, All Right Reserved.</p>
                  
             
         </div>

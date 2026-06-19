@@ -124,7 +124,7 @@ footer.innerHTML = `
 
         </footer>
         <!--Footer Bottom-->
-        <div class="footer-bottom bg-[#fd2222] "> <!-- Scroll To Top -->
+        <div class="footer-bottom bg-[#fd2222] px-5"> <!-- Scroll To Top -->
           
                         <p class="!text-white md:ml-[150px]">© 2026 Criticare Hospital, All Right Reserved.</p>
                  

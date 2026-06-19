@@ -210,6 +210,20 @@
                     <li><a href="index.html#!" class="block px-4 py-2 text-sm text-slate-700 hover:bg-red-50 hover:text-[#e8192c] font-semibold transition no-underline">Video Testimonials</a></li>
                   </ul>
                 </li>
+
+                <li>
+  <a href="esic.html" class="nav-link px-4 py-3.5 text-sm font-bold text-white hover:bg-black/15 transition duration-150 block no-underline">
+    ESIC
+  </a>
+</li>
+
+
+
+<li>
+  <a href="mjpjay.html" class="nav-link px-4 py-3.5 text-sm font-bold text-white hover:bg-black/15 transition duration-150 block no-underline">
+    MJPJAY
+  </a>
+</li>
                 
                 <!-- Contact Us -->
                 <li>
@@ -341,6 +355,20 @@
                     <li><a href="index.html#!" class="block px-4 py-2 text-sm text-slate-700 hover:bg-red-50 hover:text-[#e8192c] font-semibold transition no-underline">Video Testimonials</a></li>
                   </ul>
                 </li>
+
+                <li>
+  <a href="esic.html" class="nav-link-sticky px-3 py-2 text-sm font-bold text-white hover:bg-black/10 transition duration-150 rounded-md no-underline">
+    ESIC
+  </a>
+</li>
+
+
+
+<li>
+  <a href="mjpjay.html" class="nav-link-sticky px-3 py-2 text-sm font-bold text-white hover:bg-black/10 transition duration-150 rounded-md no-underline">
+    MJPJAY
+  </a>
+</li>
                 <!-- Contact Us -->
                 <li>
                   <a href="contact.php.html" class="nav-link-sticky px-3 py-2 text-sm font-bold text-white hover:bg-black/10 transition duration-150 rounded-md no-underline">Contact Us</a>
@@ -517,6 +545,22 @@
               </ul>
             </li>
 
+            <li>
+  <a href="esic.html" class="mobile-nav-link flex items-center space-x-3 text-slate-300 hover:text-white hover:bg-white/5 px-4 py-3 rounded-lg font-semibold transition duration-200 no-underline">
+    <i class="fa fa-hospital text-[#e8192c] w-5 text-center"></i>
+    <span>ESIC</span>
+  </a>
+</li>
+
+
+
+
+<li>
+  <a href="mjpjay.html" class="mobile-nav-link flex items-center space-x-3 text-slate-300 hover:text-white hover:bg-white/5 px-4 py-3 rounded-lg font-semibold transition duration-200 no-underline">
+    <i class="fa fa-heartbeat text-[#e8192c] w-5 text-center"></i>
+    <span>MJPJAY</span>
+  </a>
+</li>
             <!-- Contact Us -->
             <li>
               <a href="contact.php.html" class="mobile-nav-link flex items-center space-x-3 text-slate-300 hover:text-white hover:bg-white/5 px-4 py-3 rounded-lg font-semibold transition duration-200 no-underline">

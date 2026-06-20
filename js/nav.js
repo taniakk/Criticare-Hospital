@@ -546,7 +546,7 @@
             </li>
 
             <li>
-  <a href="esic.html" class="mobile-nav-link flex items-center space-x-3 text-slate-300 hover:text-white hover:bg-white/5 px-4 py-3 rounded-lg font-semibold transition duration-200 no-underline">
+  <a href="/esic.html" class="mobile-nav-link flex items-center space-x-3 text-slate-300 hover:text-white hover:bg-white/5 px-4 py-3 rounded-lg font-semibold transition duration-200 no-underline">
     <i class="fa fa-hospital text-[#e8192c] w-5 text-center"></i>
     <span>ESIC</span>
   </a>

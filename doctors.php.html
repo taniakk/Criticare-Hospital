@@ -14,6 +14,7 @@
 <link href="css/style.css" rel="stylesheet">
 <link href="css/responsive.css" rel="stylesheet">
 
+
 <!--Color Themes-->
 <!-- <link id="theme-color-file" href="css/color-themes/tealblue.css" rel="stylesheet"> -->
 
@@ -30,6 +31,7 @@
 	
 	<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0CX6MFLRBG"></script>
+<script src="https://cdn.tailwindcss.com"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -37,6 +39,93 @@
 
   gtag('config', 'G-0CX6MFLRBG');
 </script>
+
+
+<style>
+/* Doctors Grid */
+.grid.grid-cols-2.md\:grid-cols-3.lg\:grid-cols-4{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:24px;
+    align-items:stretch;
+}
+
+@media (min-width:768px){
+    .grid.grid-cols-2.md\:grid-cols-3.lg\:grid-cols-4{
+        grid-template-columns:repeat(3,minmax(0,1fr));
+    }
+}
+
+@media (min-width:1024px){
+    .grid.grid-cols-2.md\:grid-cols-3.lg\:grid-cols-4{
+        grid-template-columns:repeat(4,minmax(0,1fr));
+    }
+}
+
+/* Professional Doctor Cards */
+.dbox{
+    width:100% !important;
+    max-width:250px;
+    min-height:280px;
+    margin:auto;
+    padding:20px !important;
+    background:#fff;
+    border-radius:16px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    transition:all .3s ease;
+}
+
+.dbox:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* All Doctor Images Same Size */
+.dbox img{
+    width:140px !important;
+    height:140px !important;
+    object-fit:cover !important;
+    object-position:center;
+    border-radius:50% !important;
+    border:4px solid #f1f5f9;
+    margin-bottom:15px !important;
+    display:block;
+}
+
+/* Doctor Icons */
+.dbox > div:first-child{
+    width:140px !important;
+    height:140px !important;
+    border-radius:50% !important;
+    background:#eff6ff !important;
+    border:4px solid #dbeafe;
+    margin-bottom:15px !important;
+}
+
+.dbox i.fa-user-md{
+    font-size:64px !important;
+    color:#2563eb !important;
+}
+
+/* Doctor Names */
+.dbox h3{
+    font-size:18px !important;
+    font-weight:600;
+    color:#1f2937;
+    line-height:1.5;
+    margin-top:auto;
+    min-height:55px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+</style>
+
 </head>
 	<body>
 
@@ -101,22 +190,30 @@
                     <button class="btn btn-default filter-button" data-filter="rheumatologist">Rheumatologist</button>
                 </div>
                 <div class="clearfix"></div>
-                <div class="row">
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter physician">
-                    <div class="dbox">
-                        <h3>Dr. Sundeep G. Mestri MD</h3>
-                        <!-- <p>MBBS, MD DNB (Internal Medicine)</p> -->
-                    </div>
-                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 py-8">
+
+            <!-- doc1 -->
+    <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/dr-sundeep1.png"
+             alt="Dr. Sundeep G. Mestri"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Sundeep G. Mestri MD</h3>
+
+    </div>
 
 
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter cardiologist physician">
-                    <div class="dbox">
-                        <h3>Dr. Sameer R. Dumir MD</h3>
-                        <!-- <p>MBBS, MD, CCEBDM (Chest Medicine)</p> -->
-                      
-                    </div>
-                </div>
+   <!-- doc2 -->
+              <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/dr-sameer.png"
+             alt="Dr. Sundeep G. Mestri"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Sameer R. Dumir MD</h3>
+
+    </div>
                 <!-- <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter ">
                     <div class="dbox">
                         <h3>Dr. Sameer R. Dumir </h3>
@@ -124,307 +221,464 @@
                     
                     </div>
                 </div> -->
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter cardiologist">
-                    <div class="dbox">
-                        <h3>Dr. G. Manoj </h3>
-                        <!-- <p>MS (General Surgeon )</p> -->
-                       
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter neurologist">
-                    <div class="dbox">
-                        <h3>Dr. Bhavin Pujara</h3>
-                        <!-- <p>MS (Orthopaedics)</p> -->
-                     
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter neurologist">
-                    <div class="dbox">
-                        <h3>Dr. Deepak Aiwale</h3>
-                        <!-- <p>MS (Orthopaedics)</p> -->
-                      
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter ent">
-                    <div class="dbox">
-                        <h3> Dr. Tushar Gori</h3>
-                        <!-- <p>MBBS, D.G.O</p> -->
-                  
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter ent">
-                    <div class="dbox">
-                        <h3>Dr. Ashok Garje</h3>
-                        <!-- <p>MBBS, D.G.O</p> -->
-                       
-                    </div>
-                </div>
-        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter ent">
-                    <div class="dbox">
-                        <h3>Dr. Sachin Nemane </h3>
-                        <!-- <p>MBBS, M.S (Gynaec &amp; Obs)</p> -->
-                    
-                    </div>
-                </div>
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter orthopaedican">
-                    <div class="dbox">
-                        <h3>Dr. Santosh Yadav</h3>
-                        <!-- <p>MD (Pathology)</p> -->
-                      
-                    </div>
-                </div>
-            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter orthopaedican">
-                    <div class="dbox">
-                        <h3>Dr. Manish Sontakke</h3>
-                        <!-- <p>DNB (Radio-Diagnosis)</p> -->
-                      
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter orthopaedican">
-                    <div class="dbox">
-                        <h3>Dr. Abhay Chhallani</h3>
-                        <!-- <p>MD, D.M (Aneasthesiology)</p> -->
-                        
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter radiologist">
-                    <div class="dbox">
-                        <h3>Dr. Varsha Dumir</h3>
-                        <!-- <p>MD (Aneasthesiology)</p> -->
-                     
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter opthalmologist">
-                    <div class="dbox">
-                        <h3>Dr. Taori MS</h3>
-                        <!-- <p>MD (Aneasthesiology)</p> -->
-                      
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter opthalmologist">
-                    <div class="dbox">
-                        <h3>Dr. Rajesh Kapoor MS</h3>
-                        <!-- <p>MS (Neuro Surgery)</p> -->
-                   
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter genral-surgeon">
-                    <div class="dbox">
-                        <h3>Dr. Dhaval Shah MS</h3>
-                        <!-- <p>DNB (Surgical Oncology)</p> -->
-                    
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter genral-surgeon">
-                    <div class="dbox">
-                        <h3> Dr. Karesh Kanhat MS</h3>
-                        <!-- <p>M.D, D.M (Nephrology)</p> -->
-                    
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter nuritionist-&-dietician">
-                    <div class="dbox">
-                        <h3>Dr. Rashmi L. Bothra MAD</h3>
-                        <!-- <p>M.D General Medicine, D.M (Cardiology)</p> -->
-                    
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter dermatologist">
-                    <div class="dbox">
-                        <h3>Dr. Vaishali Sawant</h3>
-                        <!-- <p>D.M (Cardiology)</p> -->
-                     
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter dermatologist">
-                    <div class="dbox">
-                        <h3> Dr. Veena MD</h3>
-                        <!-- <p>MS, Mch (Plastic &amp; Reconstructive Surgeon)</p> -->
-                     
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter dermatologist">
-                    <div class="dbox">
-                        <h3>Dr. Pranit Pharande</h3>
-                        <!-- <p>Mch (Urology)</p> -->
-                     
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter psychatrist">
-                    <div class="dbox">
-                        <h3>Dr. Amit Upasham</h3>
-                        <!-- <p>MD DM (Neurology)</p> -->
-                    
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter psychatrist">
-                    <div class="dbox">
-                        <h3>Dr. Vikas Deshmukh</h3>
-                        <!-- <p>MD (Paediatrics)</p> -->
-                    
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter chest-physician">
-                    <div class="dbox">
-                        <h3>Dr. Sundeep G. Mestri MD</h3>
-                        <!-- <p>Mch (Plastic &amp; Reconstructive Surgeon)</p> -->
-                     
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter urologist">
-                    <div class="dbox">
-                        <h3>Dr. Vivek Jadhav</h3>
-                        <!-- <p>MDS (Oral &amp; Maxillofacial Surgeon)</p> -->
-                     
-                    </div>
-                </div>
-                   <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter urologist">
-                    <div class="dbox">
-                        <h3>Dr. Nandan Poojari</h3>
-                        <!-- <p>MDS (Oral &amp; Maxillofacial Surgeon)</p> -->
-                     
-                    </div>
-                </div>
-                   <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter nephrologist">
-                    <div class="dbox">
-                        <h3>Dr. Nikhil Kedia</h3>
-                        <!-- <p>MDS (Oral &amp; Maxillofacial Surgeon)</p> -->
-                     
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter nephrologist">
-                    <div class="dbox">
-                        <h3>Dr.Vaibhav Keskar</h3>
-                        <!-- <p>MDS (Oral &amp; Maxillofacial Surgeon)</p> -->
-                     
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter neuro-surgeon">
-                    <div class="dbox">
-                        <h3>Dr. Kapit Khandelwal</h3>
-                        <!-- <p>MDS (Oral &amp; Maxillofacial Surgeon)</p> -->
-                     
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter paediatrician ">
-                    <div class="dbox">
-                        <h3>Dr. Hemant Baheti</h3>
-                        <!-- <p>MDS (Oral &amp; Maxillofacial Surgeon)</p> -->
-                     
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter dental-surgeon">
-                    <div class="dbox">
-                        <h3>Dr. Alka Shetol</h3>
-                        <!-- <p>MDS (Oral &amp; Maxillofacial Surgeon)</p> -->
-                     
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hematologist">
-                    <div class="dbox">
-                        <h3>Dr. Deepkumar Mahajan</h3>
-                        <!-- <p>MDS (Oral &amp; Maxillofacial Surgeon)</p> -->
-                     
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter oncologist">
-                    <div class="dbox">
-                        <h3>Dr. Nilesh Chordiya </h3>
-                        <!-- <p>MDS (Oral &amp; Maxillofacial Surgeon)</p> -->
-                     
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter oncologist">
-                    <div class="dbox">
-                        <h3>Dr. Nirmal Rautya</h3>
-                        <!-- <p>MDS (Oral &amp; Maxillofacial Surgeon)</p> -->
-                     
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter gastoentrology">
-                    <div class="dbox">
-                        <h3>Dr. Suryprakash Bhandari</h3>
-                        <!-- <p>MDS (Oral &amp; Maxillofacial Surgeon)</p> -->
-                     
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter gastoentrology">
-                    <div class="dbox">
-                        <h3>Dr. Sonali Gautam</h3>
-                        <!-- <p>MDS (Oral &amp; Maxillofacial Surgeon)</p> -->
-                     
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter physiotherapist">
-                    <div class="dbox">
-                        <h3>Dr. Tasmiya Shaikh</h3>
-                        <!-- <p>MDS (Oral &amp; Maxillofacial Surgeon)</p> -->
-                     
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter physiotherapist">
-                    <div class="dbox">
-                        <h3>Dr. Rajesh Yadav</h3>
-                        <!-- <p>MDS (Oral &amp; Maxillofacial Surgeon)</p> -->
-                     
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter infectious-disease">
-                    <div class="dbox">
-                        <h3>Dr. Anita Methew</h3>
-                        <!-- <p>MDS (Oral &amp; Maxillofacial Surgeon)</p> -->
-                     
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter plastic-surgeon">
-                    <div class="dbox">
-                        <h3>Dr. Hemant Patil </h3>
-                        <!-- <p>MDS (Oral &amp; Maxillofacial Surgeon)</p> -->
-                     
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter plastic-surgeon">
-                    <div class="dbox">
-                        <h3>Dr. Ashok Pandey</h3>
-                        <!-- <p>MDS (Oral &amp; Maxillofacial Surgeon)</p> -->
-                     
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter anesthesia">
-                    <div class="dbox">
-                        <h3>Dr. Sagar Gaikwad</h3>
-                        <!-- <p>MDS (Oral &amp; Maxillofacial Surgeon)</p> -->
-                     
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter anesthesia">
-                    <div class="dbox">
-                        <h3>Dr. Rajendra Khade</h3>
-                        <!-- <p>MDS (Oral &amp; Maxillofacial Surgeon)</p> -->
-                     
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hematologist">
-                    <div class="dbox">
-                        <h3>Dr. Haresh Shendge</h3>
-                        <!-- <p>MDS (Oral &amp; Maxillofacial Surgeon)</p> -->
-                     
-                    </div>
-                </div>
-                <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter gynaecologist-surgeon">
-                    <div class="dbox">
-                        <h3>Dr. Namrata Kshatriya</h3>
-                        <!-- <p>MDS (Oral &amp; Maxillofacial Surgeon)</p> -->
-                     
-                    </div>
-                </div>
-                 <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter rheumatologist">
-                    <div class="dbox">
-                        <h3>Dr. Sachin Katarkar</h3>
-                        <!-- <p>MDS (Oral &amp; Maxillofacial Surgeon)</p> -->
-                     
-                    </div>
-                </div>
+
+                <!-- doc3 -->
+               <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+    <div style="width:120px; height:120px; margin:0 auto 15px; background:#f3f4f6; border-radius:10px; display:flex; align-items:center; justify-content:center;">
+        <i class="fas fa-user-md" style="font-size:60px; color:#0d6efd;"></i>
+    </div>
+
+    <h3 style="font-size:18px;">Dr. G. Manoj </h3>
+
+</div>
+
+          <!-- doc4 -->
+                     <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+    <div style="width:120px; height:120px; margin:0 auto 15px; background:#f3f4f6; border-radius:10px; display:flex; align-items:center; justify-content:center;">
+        <i class="fas fa-user-md" style="font-size:60px; color:#0d6efd;"></i>
+    </div>
+
+    <h3 style="font-size:18px;">Dr. Bhavin Pujara </h3>
+
+</div>
+
+<!-- doc5 -->
+                <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/Dr. Deepak Aiwale.jpg"
+             alt="Dr. Sundeep G. Mestri"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Deepak Aiwale</h3>
+
+    </div>
+                    <!-- doc6 -->
+                    <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/Dr. Tushar Gori.jpg"
+             alt="Dr. Tushar Gori"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Tushar Gori</h3>
+
+    </div>
+
+    <!-- doc7 -->
+                    <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/Dr. Ashok Garje.jpg"
+             alt="Dr. Ashok Garje"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Ashok Garje</h3>
+
+    </div>
+
+    <!-- doc8 -->
+                <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/Dr. Sachin Nemane.jpg"
+             alt="Dr. Sachin Nemane"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Sachin Nemane</h3>
+
+    </div>
+
+    <!-- doc9 -->
+                     <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/Dr. Santosh Yadav.jpg"
+             alt="Dr. Santosh Yadav"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Santosh Yadav</h3>
+
+    </div>
+
+    <!-- doc10 -->
+                     <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/Dr. Manish Sontakke.jpg"
+             alt="Dr. Manish Sontakke"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Manish Sontakke</h3>
+
+    </div>
+
+    <!-- doc11 -->
+                         <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/Dr. Abhay Chhallani.png"
+             alt="Dr. Abhay Chhallani"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Abhay Chhallani</h3>
+
+    </div>
+
+    <!-- doc12 -->
+                     <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+    <div style="width:120px; height:120px; margin:0 auto 15px; background:#f3f4f6; border-radius:10px; display:flex; align-items:center; justify-content:center;">
+        <i class="fas fa-user-md" style="font-size:60px; color:#0d6efd;"></i>
+    </div>
+
+    <h3 style="font-size:18px;">Dr. Varsha Dumir </h3>
+
+</div>
+
+                <!-- doc13 -->
+                  <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/Dr. Taori MS.jpg "
+             alt="Dr. Taori MS"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Taori MS</h3>
+
+    </div>
+
+                <!-- doc14 -->
+                  <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/Dr. Rajesh Kapoor MS.jpg"
+             alt="Dr. Sundeep G. Mestri"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Rajesh Kapoor MS</h3>
+
+    </div>
+
+                <!-- doc15 -->
+                 <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/Dr. Dhaval Shah MS.jpg"
+             alt="Dr. Dhaval Shah"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Dhaval Shah MS</h3>
+
+    </div>
+
+                <!-- doc16 -->
+                  <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/Dr. Karesh Kanhat MS.jpg"
+             alt="Dr. Karesh Kanhat"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Karesh Kanhat MS</h3>
+
+    </div>
+
+                <!-- doc17 -->
+                 <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/Dr. Rashmi L. Bothra MAD.jpg"
+             alt="Dr. Rashmi L. Bothra"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Rashmi L. Bothra MAD</h3>
+
+    </div>
+
+                <!-- doc18 -->
+                <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/Dr. Vaishali Sawant.jpg"
+             alt="Dr. Vaishali Sawant"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Vaishali Sawant</h3>
+
+    </div>
+
+                <!-- doc19 -->
+                          <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+    <div style="width:120px; height:120px; margin:0 auto 15px; background:#f3f4f6; border-radius:10px; display:flex; align-items:center; justify-content:center;">
+        <i class="fas fa-user-md" style="font-size:60px; color:#0d6efd;"></i>
+    </div>
+
+    <h3 style="font-size:18px;">Dr. Veena MD</h3>
+
+</div>
+
+                <!-- doc20 -->
+                          <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+    <div style="width:120px; height:120px; margin:0 auto 15px; background:#f3f4f6; border-radius:10px; display:flex; align-items:center; justify-content:center;">
+        <i class="fas fa-user-md" style="font-size:60px; color:#0d6efd;"></i>
+    </div>
+
+    <h3 style="font-size:18px;">Dr. Pranit Pharande </h3>
+
+</div>
+
+                <!-- doc21 -->
+                    <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/Dr.Amit Upasham.jpg"
+             alt="Dr. Amit Upasham"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Amit Upasham</h3>
+
+    </div>
+
+                <!-- doc22 -->
+                   <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/Dr. Vikas Deshmukh.jpg"
+             alt="Dr. Vikas Deshmukh"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Vikas Deshmukh</h3>
+
+    </div>
+
+                <!-- doc23 -->
+                    <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/Dr. Vivek Jadhav.jpg"
+             alt="Dr. Vivek Jadhav"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Vivek Jadhav</h3>
+
+    </div>
+
+                <!-- doc24 -->
+                      <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/Dr. Nandan Poojari.png"
+             alt="Dr. Nandan Poojari"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Nandan Poojari</h3>
+
+    </div>
+
+                <!-- doc25 -->
+                     <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/Dr. Nikhil Kedia.jpg"
+             alt="Dr. Nikhil Kedia"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Nikhil Kedia</h3>
+
+    </div>
+
+                <!-- doc26 -->
+                    <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/Dr.Vaibhav Keskar.jpg"
+             alt="Dr. Vaibhav Keskar"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr.Vaibhav Keskar</h3>
+
+    </div>
+
+                <!-- doc27 -->
+                     <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+    <div style="width:120px; height:120px; margin:0 auto 15px; background:#f3f4f6; border-radius:10px; display:flex; align-items:center; justify-content:center;">
+        <i class="fas fa-user-md" style="font-size:60px; color:#0d6efd;"></i>
+    </div>
+
+    <h3 style="font-size:18px;">Dr. Kapit Khandelwal</h3>
+
+</div>
+
+                <!-- doc28 -->
+                  <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/Dr. Hemant Baheti.jpg"
+             alt="Dr. Hemant Baheti"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Hemant Baheti</h3>
+
+    </div>
+
+                <!-- doc29 -->
+                    <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+    <div style="width:120px; height:120px; margin:0 auto 15px; background:#f3f4f6; border-radius:10px; display:flex; align-items:center; justify-content:center;">
+        <i class="fas fa-user-md" style="font-size:60px; color:#0d6efd;"></i>
+    </div>
+
+    <h3 style="font-size:18px;">Dr. Alka Shetol </h3>
+
+</div>
+
+                <!-- doc30 -->
+                     <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+    <div style="width:120px; height:120px; margin:0 auto 15px; background:#f3f4f6; border-radius:10px; display:flex; align-items:center; justify-content:center;">
+        <i class="fas fa-user-md" style="font-size:60px; color:#0d6efd;"></i>
+    </div>
+
+    <h3 style="font-size:18px;">Dr. Deepkumar Mahajan </h3>
+
+</div>
+
+                <!-- doc31 -->
+                    <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/Dr. Nilesh Chordiya.png"
+             alt="Dr. Nilesh Chordiya"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Nilesh Chordiya</h3>
+
+    </div>
+
+                <!-- doc32 -->
+                    <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+    <div style="width:120px; height:120px; margin:0 auto 15px; background:#f3f4f6; border-radius:10px; display:flex; align-items:center; justify-content:center;">
+        <i class="fas fa-user-md" style="font-size:60px; color:#0d6efd;"></i>
+    </div>
+
+    <h3 style="font-size:18px;">Dr. Nirmal Rautya</h3>
+
+</div>
+
+                <!-- doc33 -->
+                    <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/Dr. Suryprakash Bhandari.jpg"
+             alt="Dr. Suryprakash Bhandari"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Suryprakash Bhandari</h3>
+
+    </div>
+
+                <!-- doc34 -->
+                       <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/Dr. Sonali Gautam.jpg"
+             alt="Dr. Sonali Gautam"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Sonali Gautam</h3>
+
+    </div>
+
+                <!-- doc35 -->
+                     <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+    <div style="width:120px; height:120px; margin:0 auto 15px; background:#f3f4f6; border-radius:10px; display:flex; align-items:center; justify-content:center;">
+        <i class="fas fa-user-md" style="font-size:60px; color:#0d6efd;"></i>
+    </div>
+
+    <h3 style="font-size:18px;">Dr. Tasmiya Shaikh </h3>
+
+</div>
+
+                <!-- doc36 -->
+                       <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/Dr. Rajesh Yadav.jpg"
+             alt="Dr. Rajesh Yadav"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Rajesh Yadav</h3>
+
+    </div>
+
+                <!-- doc37 -->
+                       <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/Dr. Anita Methew.jpg"
+             alt="Dr. Anita Methew"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Anita Methew</h3>
+
+    </div>
+
+                <!-- doc38 -->
+                      <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+    <div style="width:120px; height:120px; margin:0 auto 15px; background:#f3f4f6; border-radius:10px; display:flex; align-items:center; justify-content:center;">
+        <i class="fas fa-user-md" style="font-size:60px; color:#0d6efd;"></i>
+    </div>
+
+    <h3 style="font-size:18px;">Dr. Hemant Patil </h3>
+
+</div>
+                <!-- doc40 -->
+                    <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+    <div style="width:120px; height:120px; margin:0 auto 15px; background:#f3f4f6; border-radius:10px; display:flex; align-items:center; justify-content:center;">
+        <i class="fas fa-user-md" style="font-size:60px; color:#0d6efd;"></i>
+    </div>
+
+    <h3 style="font-size:18px;">Dr. Ashok Pandey</h3>
+
+</div>
+
+                <!-- doc41 -->
+                       <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/Dr. Sagar Gaikwad.jpg"
+             alt="Dr. Sagar Gaikwad"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Sagar Gaikwad</h3>
+
+    </div>
+
+                <!-- doc42 -->
+                   <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+    <div style="width:120px; height:120px; margin:0 auto 15px; background:#f3f4f6; border-radius:10px; display:flex; align-items:center; justify-content:center;">
+        <i class="fas fa-user-md" style="font-size:60px; color:#0d6efd;"></i>
+    </div>
+
+    <h3 style="font-size:18px;">Dr. Rajendra Khade </h3>
+
+</div>
+
+                <!-- doc43 -->
+                       <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/Dr. Haresh Shendge.jpg"
+             alt="Dr. Haresh Shendge"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Haresh Shendge</h3>
+
+    </div>
+                <!-- doc44 -->
+                      <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+    <div style="width:120px; height:120px; margin:0 auto 15px; background:#f3f4f6; border-radius:10px; display:flex; align-items:center; justify-content:center;">
+        <i class="fas fa-user-md" style="font-size:60px; color:#0d6efd;"></i>
+    </div>
+
+    <h3 style="font-size:18px;">Dr. Namrata Kshatriya </h3>
+
+</div>
+                 <!-- doc45 -->
+                      <div class="dbox text-center" style="width:220px; margin:0 auto; padding:15px;">
+
+        <img src="images/Dr. Sachin Katarkar.jpg"
+             alt="Dr. Sachin Katarkar"
+             style="width:120px; height:120px; object-fit:cover; margin:0 auto 15px; border-radius:10px; display:block;">
+
+        <h3 style="font-size:18px;">Dr. Sachin Katarkar</h3>
+
+    </div>
 
 
 </div>

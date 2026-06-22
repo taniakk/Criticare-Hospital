@@ -224,6 +224,12 @@
     MJPJAY
   </a>
 </li>
+
+<li>
+  <a href="dialysis.html" class="nav-link px-4 py-3.5 text-sm font-bold text-white hover:bg-black/15 transition duration-150 block no-underline">
+    Dialysis
+  </a>
+</li>
                 
                 <!-- Contact Us -->
                 <li>
@@ -367,6 +373,11 @@
 <li>
   <a href="mjpjay.html" class="nav-link-sticky px-3 py-2 text-sm font-bold text-white hover:bg-black/10 transition duration-150 rounded-md no-underline">
     MJPJAY
+  </a>
+</li>
+<li>
+  <a href="dialysis.html" class="nav-link-sticky px-3 py-2 text-sm font-bold text-white hover:bg-black/10 transition duration-150 rounded-md no-underline">
+    Dialysis
   </a>
 </li>
                 <!-- Contact Us -->
@@ -545,8 +556,8 @@
               </ul>
             </li>
 
-            <li>
-  <a href="/esic.html" class="mobile-nav-link flex items-center space-x-3 text-slate-300 hover:text-white hover:bg-white/5 px-4 py-3 rounded-lg font-semibold transition duration-200 no-underline">
+ <li>
+  <a href="esic.html" class="mobile-nav-link flex items-center space-x-3 text-slate-300 hover:text-white hover:bg-white/5 px-4 py-3 rounded-lg font-semibold transition duration-200 no-underline">
     <i class="fa fa-hospital text-[#e8192c] w-5 text-center"></i>
     <span>ESIC</span>
   </a>
@@ -559,6 +570,13 @@
   <a href="mjpjay.html" class="mobile-nav-link flex items-center space-x-3 text-slate-300 hover:text-white hover:bg-white/5 px-4 py-3 rounded-lg font-semibold transition duration-200 no-underline">
     <i class="fa fa-heartbeat text-[#e8192c] w-5 text-center"></i>
     <span>MJPJAY</span>
+  </a>
+</li>
+
+<li>
+  <a href="dialysis.html" class="mobile-nav-link flex items-center space-x-3 text-slate-300 hover:text-white hover:bg-white/5 px-4 py-3 rounded-lg font-semibold transition duration-200 no-underline">
+    <i class="fa fa-procedures text-[#e8192c] w-5 text-center"></i>
+    <span>Dialysis</span>
   </a>
 </li>
             <!-- Contact Us -->

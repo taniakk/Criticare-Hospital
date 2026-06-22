@@ -72,6 +72,7 @@ footer.innerHTML = `
                             <li><a href="contact.php.html" class="hover:text-red-500">+ Contact Us</a></li>
                             <li><a href="esic.html" class="hover:text-red-500">+ ESIC</a></li>
                             <li><a href="mjpjay.html" class="hover:text-red-500">+ MJPJAY</a></li>
+                            <li><a href="dialysis.html" class="hover:text-red-500">+ Dialysis Center</a></li>
                         </ul>
                     </div>
 
